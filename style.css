@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #004e92, #000428);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.card {
+    width: 90%;
+    max-width: 480px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 20px;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 0.9em;
+    color: #ebfffc;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 20px;
+    height: 50px;
+    border-radius: 25px;
+    flex: 1;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button img {
+    width: 20px;
+    height: 20px;
+}
+
+.weather-icon {
+    width: 120px;
+    margin-top: 10px;
+}
+
+.weather h1 { 
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.weather h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: -5px;
+    color: #ebfffc;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.col img {
+    width: 30px;
+    margin-right: 8px;
+}
+
+.humidity, .wind {
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+.error {
+    display: none;
+    text-align: center;
+    font-size: 0.9em;
+    color: #ff4c4c;
+    margin-bottom: 20px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+}
+
+.forecast-item {
+    text-align: center;
+    font-size: 0.9em;
+    color: #ebfffc;
+    margin: 10px 0;
+}
+
+.forecast-item img {
+    width: 30px;
+    margin: 5px 0;
+}
+
+.forecast-item p {
+    margin: 5px 0;
+}
+
+/* Add this to style.css */
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather {
+    display: none; /* Hidden initially */
+    animation: fadeInUp 0.8s ease forwards; /* Animation for the weather box */
+}
+
+/* Display the weather box after fetching data */
+.show-weather {
+    display: block;
+}
+
